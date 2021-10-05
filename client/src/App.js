@@ -1,8 +1,10 @@
 import React from "react";
-import Form from "./components/Form/form";
+import MenuAppBar from ".components/NavBar"
+// import Form from "./components/Form/form";
 
-function App() {
-  return <Form />;
-}
+// function App() {
+//   return <Form />;
+// }
 
-export default App;
+// export default App;
+
