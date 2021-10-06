@@ -25,6 +25,7 @@ const client = new ApolloClient({
   uri: "/graphql",
   cache: new InMemoryCache(),
 });
+console.log("test");
 
 function App() {
   return <Form />;
