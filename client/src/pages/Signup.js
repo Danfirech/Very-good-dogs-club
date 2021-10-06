@@ -49,22 +49,23 @@ const Signup = () => {
         <CardMedia
           component="img"
           height="140"
-          image="../public/signup.jpg"
+          image
+          src="../public/signup.jpg"
           alt="pug hating mondays"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Lizard
+            Sign up or Login
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            Greetings! Welcome to Very Good Dogs Club where your dog get the
+            platform they need to write their thoughts about YOU.
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          Share
+          {handleFormSubmit}Submit
         </Button>
       </CardActions>
     </Card>
