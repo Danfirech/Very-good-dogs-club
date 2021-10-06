@@ -1,0 +1,52 @@
+[
+  {
+    "username": "Olive Scott",
+    "email": "olive@dogzrule.com",
+    "password": "password01"
+  },
+  {
+    "username": "Leo Blaustein",
+    "email": "leo@mommaboy.com",
+    "password": "password02"
+  },
+  {
+    "username": "Lucy Possehl",
+    "email": "lucy@midwest.com",
+    "password": "password03"
+  },
+  {
+    "username": "Oscar Possehl",
+    "email": "oscar@dogz.com",
+    "password": "password04"
+  },
+  {
+    "username": "Scooter",
+    "email": "scooter@beagle.com",
+    "password": "password05"
+  },
+  {
+    "username": "Roo Beezhold",
+    "email": "akay@techfriends.dev",
+    "password": "password06"
+  },
+  {
+    "username": "C.A.R. Hoare",
+    "email": "choare@techfriends.dev",
+    "password": "password07"
+  },
+  {
+    "username": "David Thomas",
+    "email": "dthomas@techfriends.dev",
+    "password": "password08"
+  },
+  {
+    "username": "Donald Knuth",
+    "email": "dknuth@techfriends.dev",
+    "password": "password09"
+  },
+  {
+    "username": "Lernantino",
+    "email": "lernantino@techfriends.dev",
+    "password": "password10"
+  }
+]
