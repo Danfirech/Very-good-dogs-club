@@ -14,8 +14,8 @@ export const QUERY_USER = gql`
 `;
 
 export const QUERY_POSTS = gql`
-  query getThoughts {
-    thoughts {
+  query getPosts {
+    posts {
       _id
       postText
       username
@@ -24,17 +24,12 @@ export const QUERY_POSTS = gql`
 `;
 
 export const QUERY_SINGLE_POST = gql`
-  query getSingleThought($thoughtId: ID!) {
-    thought(thoughtId: $thoughtId) {
+  query getSingleThought($Profile: ID!) {
+    post(ProfileId: $ProfileId) {
       _id
-      thoughtText
-      thoughtAuthor
+      postText
+     postName
       createdAt
-      comments {
-        _id
-        commentText
-        commentAuthor
-        createdAt
       }
     }
   }
@@ -46,10 +41,10 @@ export const QUERY_ME = gql`
       _id
       username
       email
-      thoughts {
+      posts {
         _id
-        thoughtText
-        thoughtAuthor
+        postText
+        postName
         createdAt
       }
     }
