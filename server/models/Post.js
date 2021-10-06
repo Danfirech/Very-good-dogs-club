@@ -4,7 +4,7 @@ const { Schema, model } = require("mongoose");
 const postSchema = new Schema({
   postText: {
     type: String,
-    required: "say something good!",
+    required: "You need to leave a post!",
     minlength: 1,
     maxlength: 280,
     trim: true,
