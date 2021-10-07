@@ -34,5 +34,3 @@ export const ADD_POST = gql`
     }
   }
 `;
-// export const REMOVE_POST
-// export const UPDATE_POST
