@@ -9,11 +9,13 @@ import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 //import all relevent pages
-// import Form from "./components/Form/form";
-import NavBar from "./components/NavBar";
-// import Form from "./components/Form/form";
-//import Login from "./pages/Login";
+import Home from "./pages/Home";
 import Signup from "./pages/Signup";
+import Login from "./pages/Login";
+import Single from "./pages/Single";
+import Profile from "./pages/Profile";
+import Header from "./components/Header/NavBar";
+import Footer from "./components/Footer/Footer";
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -39,8 +41,32 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <NavBar />
-      <Signup />
+      <Router>
+        <div className="flex-column justify-flex-start min-100-vh">
+          <Header />
+          <div className="container">
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route exact path="/signup">
+              <Signup />
+            </Route>
+            <Route exact path="/me">
+              <Profile />
+            </Route>
+            <Route exact path="/profiles/:username">
+              <Profile />
+            </Route>
+            <Route exact path="/thoughts/:thoughtId">
+              <Single />
+            </Route>
+          </div>
+          <Footer />
+        </div>
+      </Router>
     </ApolloProvider>
   );
 }
