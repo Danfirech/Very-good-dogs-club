@@ -1,6 +1,7 @@
 import React from "react";
 import { setContext } from "@apollo/client/link/context";
 import NavBar from "./components/NavBar";
+import Profile from "./pages/Profile";
 // import Form from "./components/Form/form";
 //import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -48,7 +49,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <NavBar />
-      <Signup />
+      <Profile />
     </ApolloProvider>
   );
 }
