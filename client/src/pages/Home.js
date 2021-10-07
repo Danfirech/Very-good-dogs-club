@@ -1,19 +1,34 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 
-// import Header from "../../components/header/Header";
-import Post from "../components/Post/Post";
-import Sidebar from "../components/SideBar/SideBar";
-import "./home.css";
+import PostList from "../components/PostList/PostList";
+import PostForm from "../components/PostForm/PostForm";
 
-export default function Home() {
+import { QUERY_POSTS } from "../utils/queries";
+
+const Home = () => {
+  const { loading, data } = useQuery(QUERY_POSTS);
+  const posts = data?.posts || [];
+
   return (
-    <>
-      {/* <Header /> */}
-      <div className="home">
-        <Post />
-        <Sidebar />
+    <main>
+      <div className="flex-row justify-center">
+        <div
+          className="col-12 col-md-10 mb-3 p-3"
+          style={{ border: "1px dotted #1a1a1a" }}
+        >
+          <PostForm />
+        </div>
+        <div className="col-12 col-md-8 mb-3">
+          {loading ? (
+            <div>Loading...</div>
+          ) : (
+            <PostList posts={posts} title="DOG..." />
+          )}
+        </div>
       </div>
-    </>
+    </main>
   );
-}
+};
+
+export default Home;
