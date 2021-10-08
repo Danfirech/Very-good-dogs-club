@@ -10,9 +10,9 @@ const resolvers = {
     user: async (parent, { username }) => {
       return User.findOne({ username }).populate("posts");
     },
-    post: async (parent, { username }) => {
+    posts: async (parent, { username }) => {
       const params = username ? { username } : {};
-      return Post.find(params).sort({ createdAt: -1 });
+      return Post.find(params);
     },
     post: async (parent, { postId }) => {
       return Post.findOne({ _id: postId });
@@ -57,10 +57,10 @@ const resolvers = {
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { thoughts: thought._id } }
+          { $addToSet: { posts: post._id } }
         );
 
-        return thought;
+        return post;
       }
       throw new AuthenticationError("You need to be logged in!");
     },
