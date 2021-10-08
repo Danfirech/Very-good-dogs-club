@@ -7,17 +7,10 @@ const postSchema = new Schema({
     required: "You need to leave a post!",
     minlength: 1,
     maxlength: 280,
-    trim: true,
   },
   postAuthor: {
     type: String,
     required: true,
-    trim: true,
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-    get: (timestamp) => dateFormat(timestamp),
   },
   comments: [
     {
