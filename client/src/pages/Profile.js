@@ -1,6 +1,7 @@
 import React from "react";
 import { Redirect, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
+import { Card, Button, ButtonGroup } from "react-bootstrap";
 
 import PostForm from "../components/PostForm/PostForm";
 import PostList from "../components/PostList/PostList";
@@ -30,29 +31,155 @@ const Profile = () => {
   }
 
   return (
-    <div>
-      <div className="flex-row justify-center mb-3">
-        <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
-          Viewing {userParam ? `${user.username}'s` : "your"} profile.
-        </h2>
-
-        <div className="col-12 col-md-10 mb-5">
-          <PostList
-            posts={user.posts}
-            title={`${user.username}'s post...`}
-            showTitle={false}
-            showUsername={false}
-          />
-        </div>
-        {!userParam && (
-          <div
-            className="col-12 col-md-10 mb-3 p-3"
-            style={{ border: "1px dotted #1a1a1a" }}
+    <div
+      style={{
+        background: "#a53860",
+      }}
+    >
+      <br></br>
+      <div container>
+        <Card style={{ width: "100", height: "200px" }}>
+          <Card.Body
+            style={{
+              background: "#a53860",
+              color: "white",
+              fontFamily: "Patrick Hand, cursive",
+            }}
           >
-            <PostForm />
-          </div>
-        )}
+            <Card.Title
+              style={{
+                background: "#a53860",
+                color: "white",
+                fontFamily: "Patrick Hand, cursive",
+                textDecoration: "underline",
+              }}
+            >
+              User Credentials
+            </Card.Title>
+            {/* <Card.Subtitle className="mb-2 text-muted">
+            Card Subtitle
+          </Card.Subtitle> */}
+
+            <Card.Text
+              style={{
+                background: "#a53860",
+                color: "white",
+                fontFamily: "Patrick Hand, cursive",
+              }}
+            >
+              Greetings ** User name??? **:
+            </Card.Text>
+            <input
+              style={{
+                background: "white",
+                color: "black",
+                fontFamily: "Patrick Hand, cursive",
+                minHeight: "100px",
+                width: "1650px",
+              }}
+            ></input>
+          </Card.Body>
+        </Card>
       </div>
+
+      <br></br>
+      <br></br>
+      <div container>
+        <Card style={{ width: "100", height: "300px" }}>
+          <Card.Body
+            style={{
+              background: "#a53860",
+              color: "white",
+              fontFamily: "Patrick Hand, cursive",
+            }}
+          >
+            <Card.Title
+              style={{
+                background: "#a53860",
+                color: "white",
+                fontFamily: "Patrick Hand, cursive",
+                textDecoration: "underline",
+              }}
+            >
+              Create New Post
+            </Card.Title>
+            {/* <Card.Subtitle className="mb-2 text-muted">
+            Card Subtitle
+          </Card.Subtitle> */}
+            <Card.Text
+              style={{
+                background: "#a53860",
+                color: "white",
+                fontFamily: "Patrick Hand, cursive",
+              }}
+            >
+              Please, share your thoughts
+            </Card.Text>
+            <input
+              style={{
+                background: "white",
+                color: "black",
+                fontFamily: "Patrick Hand, cursive",
+                minHeight: "200px",
+                width: "1650px",
+              }}
+            ></input>
+            <br></br>
+            <Button style={{ background: "#E5989B" }}>Share</Button>{" "}
+          </Card.Body>
+        </Card>
+      </div>
+      <br></br>
+      <br></br>
+
+      <Card style={{ width: "100", height: "300px" }}>
+        <Card.Body
+          style={{
+            background: "#a53860",
+            color: "white",
+            fontFamily: "Patrick Hand, cursive",
+          }}
+        >
+          <Card.Title
+            style={{
+              background: "#a53860",
+              color: "white",
+              fontFamily: "Patrick Hand, cursive",
+              textDecoration: "underline",
+            }}
+          >
+            Update or Delete a Post
+          </Card.Title>
+          {/* <Card.Subtitle className="mb-2 text-muted">
+            Card Subtitle
+          </Card.Subtitle> */}
+          <Card.Text
+            style={{
+              background: "#a53860",
+              color: "white",
+              fontFamily: "Patrick Hand, cursive",
+            }}
+          >
+            Want to make a change or delete a post? Do it below:
+          </Card.Text>
+          <input
+            style={{
+              background: "white",
+              color: "black",
+              fontFamily: "Patrick Hand, cursive",
+              minHeight: "200px",
+              width: "1650px",
+            }}
+          ></input>
+          <br></br>
+          <ButtonGroup aria-label="Basic example">
+            <Button style={{ background: "#E5989B" }}>Update</Button>
+            <Button style={{ background: "#E5989B" }}>Delete</Button>
+          </ButtonGroup>
+        </Card.Body>
+      </Card>
+      <br></br>
+      <br></br>
     </div>
   );
 };
