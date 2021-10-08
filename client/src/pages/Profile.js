@@ -101,7 +101,7 @@ const Profile = () => {
                 textDecoration: "underline",
               }}
             >
-              Create New Post
+              Get your paws on a new post
             </Card.Title>
             {/* <Card.Subtitle className="mb-2 text-muted">
             Card Subtitle

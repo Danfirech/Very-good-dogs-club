@@ -58,7 +58,7 @@ const Home = () => {
             This is a safe place for your dog to write their thoughts, concerns,
             happy moments and much, much, more! If you have an account please,
             login to write another post and if you are new here, we encourage
-            you to sign up!
+            you to sign up! POWER TO THE PAW!
           </Card.Text>
         </Card.Body>
 
