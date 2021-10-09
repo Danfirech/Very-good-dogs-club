@@ -54,7 +54,7 @@ const Profile = () => {
                 textDecoration: "underline",
               }}
             >
-              User Credentials
+              Viewing {userParam ? `${user.username}'s` : "your"} profile.
             </Card.Title>
             {/* <Card.Subtitle className="mb-2 text-muted">
             Card Subtitle
@@ -67,7 +67,7 @@ const Profile = () => {
                 fontFamily: "Patrick Hand, cursive",
               }}
             >
-              Greetings ** User name??? **:
+              Viewing {userParam ? `${user.username}'s` : "your"} profile.
             </Card.Text>
             <input
               style={{

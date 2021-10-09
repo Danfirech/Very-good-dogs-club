@@ -58,10 +58,10 @@ function App() {
           <Route exact path="/me">
             <Profile />
           </Route>
-          <Route exact path="/profile">
+          <Route exact path="/profile/:username">
             <Profile />
           </Route>
-          <Route exact path="/thoughts/:thoughtId">
+          <Route exact path="/single">
             <Single />
           </Route>
         </div>
@@ -73,6 +73,3 @@ function App() {
   );
 }
 export default App;
-
-
-

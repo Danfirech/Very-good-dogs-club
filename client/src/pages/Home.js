@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 import { Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 // import PostList from "../components/PostList/PostList";
 // import PostForm from "../components/PostForm/PostForm";
@@ -18,6 +19,8 @@ const Home = () => {
 
   return (
     <div style={{ background: "#a53860" }}>
+      <Link to="/home"></Link>
+
       <br></br>
       <br></br>
       <br></br>

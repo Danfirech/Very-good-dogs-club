@@ -1,6 +1,7 @@
 import React from "react";
+import { Card } from "react-bootstrap";
 
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
 import CommentList from "../components/CommentList/CommentList";
