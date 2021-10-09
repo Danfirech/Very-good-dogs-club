@@ -1,46 +1,3 @@
-import React from "react";
-// import { Card, Container, Nav, Navbar } from "react-bootstrap";
-// import { Link } from "react-router-dom";
-
-// import Auth from "../../utils/auth";
-// import React from "react";
-
-import { Nav, Navbar, Container } from "react-bootstrap";
-
-export const navbar = () => {
-  return (
-    <div>
-      <Navbar
-        collapseOnSelect
-        expand="lg py-3"
-        bg="#FFCDB2"
-        variant="dark"
-        style={{
-          background: "#FFCDB2",
-          color: "white",
-          fontFamily: "Patrick Hand, cursive",
-        }}
-      >
-        <Container>
-          <Navbar.Brand href="#home">Very Good Dog Club</Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#Home">Home</Nav.Link>
-              <Nav.Link href="/Profile">Profile</Nav.Link>
-            </Nav>
-            <Nav>
-              <Nav.Link href="/Login">Login</Nav.Link>
-              <Nav.Link href="/Signup">Sign up</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </div>
-  );
-};
-export default navbar;
-
 // const Header = () => {
 //   const logout = (event) => {
 //     event.preventDefault();
@@ -80,3 +37,47 @@ export default navbar;
 //     </header>
 //   );
 // };
+
+// export default Header;
+
+import React from "react";
+// import { Card, Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import Single from "../../pages/Single";
+import Auth from "../../utils/auth";
+// import { Nav, Navbar, Container } from "react-bootstrap";
+import "./NavBar.css";
+
+const navbar = () => {
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  };
+
+  return (
+    <div>
+      <nav className="navAllign">
+        <Link class="nav-link1" to="/verygooddogsclub">
+          Very Good Dog Club
+        </Link>
+        <Link class="nav-link1" to="/profile">
+          Profile
+        </Link>
+        <Link class="nav-link1" to="/home">
+          Home
+        </Link>
+        <Link className="nav-link1" to="/signup">
+          Sign Up
+        </Link>
+        <Link className="nav-link1" to="/login">
+          Login
+        </Link>
+        <Link className="nav-link1" to="/single">
+          Single
+        </Link>
+      </nav>
+    </div>
+  );
+};
+
+export default navbar;
