@@ -69,6 +69,7 @@ const Profile = () => {
             >
               Viewing {userParam ? `${user.username}'s` : "your"} profile.
             </Card.Text>
+
             <input
               style={{
                 background: "white",

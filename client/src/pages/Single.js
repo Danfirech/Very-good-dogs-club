@@ -22,103 +22,33 @@ const Single = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div
-      style={{
-        background: "#a53860",
-        height: "100vh",
-      }}
-    >
-      <br></br>
-      <div
-        container
-        style={{ display: "inline", justifyContent: "spaceBetween" }}
-      >
-        <Card
+    <div className="my-3">
+      <h3 className="card-header bg-dark text-light p-2 m-0">
+        {post.postAuthor} <br />
+        <span style={{ fontSize: "1rem" }}>
+          had this post on {post.createdAt}
+        </span>
+      </h3>
+      <div className="bg-light py-4">
+        <blockquote
+          className="p-4"
           style={{
-            width: "100",
-            height: "300px",
-            float: "right",
-            left: "15px",
+            fontSize: "1.5rem",
+            fontStyle: "italic",
+            border: "2px dotted #1a1a1a",
+            lineHeight: "1.5",
           }}
         >
-          <Card.Body
-            style={{
-              background: "#a53860",
-              color: "white",
-              fontFamily: "Patrick Hand, cursive",
-            }}
-          >
-            <Card.Title
-              style={{
-                background: "#a53860",
-                color: "white",
-                fontFamily: "Patrick Hand, cursive",
-                textDecoration: "underline",
-              }}
-            >
-              Top Dawgs of the Month:
-            </Card.Title>
-            {/* <Card.Subtitle className="mb-2 text-muted">
-            Card Subtitle
-          </Card.Subtitle> */}
-
-            <input
-              style={{
-                background: "white",
-                color: "black",
-                fontFamily: "Patrick Hand, cursive",
-                minHeight: "200px",
-                width: "400px",
-              }}
-            ></input>
-            <br></br>
-          </Card.Body>
-        </Card>
-        <br></br>
+          {post.postText}
+        </blockquote>
       </div>
-      <br></br>{" "}
-      <Card style={{ width: "900px", height: "400px", border: "none" }}>
-        <Card.Body
-          style={{
-            background: "#a53860",
-            color: "white",
-            fontFamily: "Patrick Hand, cursive",
-          }}
-        >
-          <Card.Title
-            style={{
-              background: "#a53860",
-              color: "white",
-              fontFamily: "Patrick Hand, cursive",
-              textDecoration: "underline",
-            }}
-          >
-            Top blog posts
-          </Card.Title>
-          {/* <Card.Subtitle className="mb-2 text-muted">
-            Card Subtitle
-          </Card.Subtitle> */}
 
-          <Card.Text
-            style={{
-              background: "#a53860",
-              color: "white",
-              fontFamily: "Patrick Hand, cursive",
-            }}
-          >
-            Here are our Top Posts of the Month:
-          </Card.Text>
-          <input
-            style={{
-              background: "white",
-              color: "black",
-              fontFamily: "Patrick Hand, cursive",
-              minHeight: "600px",
-              width: "800px",
-            }}
-          ></input>
-        </Card.Body>
-      </Card>
+      <div className="my-5">
+        <CommentList comments={post.comments} />
+      </div>
+      <div className="m-3 p-4" style={{ border: "1px dotted #1a1a1a" }}>
+        <CommentForm postId={post._id} />
+      </div>
     </div>
   );
 };
