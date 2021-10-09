@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 
 const PostList = ({ posts, title, showTitle = true, showUsername = true }) => {
   if (!posts.length) {
-    return <h3>No Post Yet</h3>;
+    return (
+      <h3 style={{ color: "white", fontFamily: "Patrick Hand, cursive" }}>
+        No Post Yet
+      </h3>
+    );
   }
 
   return (

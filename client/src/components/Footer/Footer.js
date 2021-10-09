@@ -5,13 +5,13 @@ import { Card } from "react-bootstrap";
 const Footer = () => {
   const styles = {
     jazz: {
-      background: "#E5989B",
+      background: "#9da2ae",
       color: "white",
       textAlign: "center",
       padding: 10,
       bottom: 25,
       top: 25,
-      fontFamily: "Patrick Hand cursive",
+      fontFamily: "Patrick Hand, cursive",
     },
   };
 
@@ -38,7 +38,7 @@ const Footer = () => {
                 style={{
                   display: "inline-block",
                   color: "white",
-                  fontFamily: "Patrick Hand cursive",
+                  fontFamily: "Patrick Hand, cursive",
                 }}
               >
                 Natalie Scott
@@ -47,7 +47,7 @@ const Footer = () => {
                 style={{
                   display: "inline-block",
                   color: "white",
-                  fontFamily: "Patrick Hand cursive",
+                  fontFamily: "Patrick Hand, cursive",
                 }}
               >
                 Daniel Possehl{" "}
@@ -56,7 +56,7 @@ const Footer = () => {
                 style={{
                   display: "inline-block",
                   color: "white",
-                  fontFamily: "Patrick Hand cursive",
+                  fontFamily: "Patrick Hand, cursive",
                 }}
               >
                 Stephanie Johansson
@@ -65,7 +65,7 @@ const Footer = () => {
                 style={{
                   display: "inline-block",
                   color: "white",
-                  fontFamily: "Patrick Hand cursive",
+                  fontFamily: "Patrick Hand, cursive",
                 }}
               >
                 K'trina Apodaca
