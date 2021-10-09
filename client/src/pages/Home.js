@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <main>
-      <div style={{ background: "#a53860" }}>
+      <div style={{ background: "#293242" }}>
         <br></br>
         <br></br>
         <br></br>
@@ -28,26 +28,30 @@ const Home = () => {
           BARK-COME to the very good dogs club!
         </h1>
         <br></br>
-        <Card
-          style={{
-            height: "500px",
-            width: "600px",
-            textAlign: "center",
-            margin: "auto",
-            background: "#9A879d",
-          }}
-        >
+        <Card style={{ textAlign: "center" }}>
           <Card.Img
             style={{ width: "500px" }}
             variant="top"
             src="../../../doggo.jpg"
           />
-
+          <br></br>
           <Card.Body>
-            <Card.Title style={{ color: "white", fontFamily: "Patrick Hand" }}>
-              Thanks for stopping by!
+            <Card.Title
+              style={{
+                fontSize: "24px",
+                color: "white",
+                fontFamily: "Patrick Hand, cursive",
+              }}
+            >
+              Thanks for stopping by! Please read before going any further
             </Card.Title>
-            <Card.Text style={{ color: "white", fontFamily: "Patrick Hand" }}>
+            <Card.Text
+              style={{
+                fontSize: "14px",
+                color: "white",
+                fontFamily: "Patrick Hand, cursive",
+              }}
+            >
               This is a safe place for your dog to write their thoughts,
               concerns, happy moments and much, much, more! If you have an
               account please, login to write another post and if you are new
@@ -62,7 +66,7 @@ const Home = () => {
         >
           <PostForm />
         </div>
-        <div className="col-12 col-md-8 mb-3">
+        <div style={{ color: "white" }} className="col-12 col-md-8 mb-3">
           {loading ? (
             <div>Loading...</div>
           ) : (
@@ -72,7 +76,7 @@ const Home = () => {
       </div>
       <div
         style={{
-          background: "#a53860",
+          background: "#9da2ae",
           height: "100vh",
         }}
       >
@@ -91,14 +95,14 @@ const Home = () => {
           >
             <Card.Body
               style={{
-                background: "#a53860",
+                background: "#293242",
                 color: "white",
                 fontFamily: "Patrick Hand, cursive",
               }}
             >
               <Card.Title
                 style={{
-                  background: "#a53860",
+                  background: "#293242",
                   color: "white",
                   fontFamily: "Patrick Hand, cursive",
                   textDecoration: "underline",
@@ -128,14 +132,14 @@ const Home = () => {
         <Card style={{ width: "900px", height: "400px", border: "none" }}>
           <Card.Body
             style={{
-              background: "#a53860",
+              background: "#293242",
               color: "white",
               fontFamily: "Patrick Hand, cursive",
             }}
           >
             <Card.Title
               style={{
-                background: "#a53860",
+                background: "#293242",
                 color: "white",
                 fontFamily: "Patrick Hand, cursive",
                 textDecoration: "underline",
@@ -149,7 +153,7 @@ const Home = () => {
 
             <Card.Text
               style={{
-                background: "#a53860",
+                background: "#293242",
                 color: "white",
                 fontFamily: "Patrick Hand, cursive",
               }}

@@ -33,7 +33,7 @@ const Profile = () => {
   return (
     <div
       style={{
-        background: "#a53860",
+        background: "#9da2ae",
       }}
     >
       <br></br>
@@ -41,14 +41,14 @@ const Profile = () => {
         <Card style={{ width: "100", height: "200px" }}>
           <Card.Body
             style={{
-              background: "#a53860",
+              background: "#9da2ae",
               color: "white",
               fontFamily: "Patrick Hand, cursive",
             }}
           >
             <Card.Title
               style={{
-                background: "#a53860",
+                background: "#293242",
                 color: "white",
                 fontFamily: "Patrick Hand, cursive",
                 textDecoration: "underline",
@@ -62,7 +62,7 @@ const Profile = () => {
 
             <Card.Text
               style={{
-                background: "#a53860",
+                background: "#293242",
                 color: "white",
                 fontFamily: "Patrick Hand, cursive",
               }}

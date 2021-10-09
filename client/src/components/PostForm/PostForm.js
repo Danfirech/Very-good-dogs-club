@@ -61,7 +61,9 @@ const PostForm = () => {
 
   return (
     <div>
-      <h3>Bark at me</h3>
+      <h3 style={{ color: "white", fontFamily: "Patrick Hand, cursive" }}>
+        Bark at me
+      </h3>
 
       {Auth.loggedIn() ? (
         <>
@@ -100,9 +102,21 @@ const PostForm = () => {
           </form>
         </>
       ) : (
-        <p>
-          You need to be logged in to share! <Link to="/login">login</Link> or{" "}
-          <Link to="/signup">signup.</Link>
+        <p style={{ color: "white", fontFamily: "Patrick Hand, cursive" }}>
+          You need to be logged in to share!{" "}
+          <Link
+            to="/login"
+            style={{ color: "white", fontFamily: "Patrick Hand, cursive" }}
+          >
+            login
+          </Link>{" "}
+          or{" "}
+          <Link
+            to="/signup"
+            style={{ color: "white", fontFamily: "Patrick Hand, cursive" }}
+          >
+            signup.
+          </Link>
         </p>
       )}
     </div>
