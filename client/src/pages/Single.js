@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+// import { Card } from "react-bootstrap";
 
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
