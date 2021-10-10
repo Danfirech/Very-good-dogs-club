@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 
+import { Card } from "react-bootstrap";
+import { ListGroup } from "react-bootstrap";
+import { ListGroupItem } from "react-bootstrap";
+
 import Auth from "../utils/auth";
 
 const Login = (props) => {
@@ -41,54 +45,91 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
-          <div className="card-body">
+    <main>
+      <Card
+        style={{ 
+        background: "#293242",
+        width: "100%",
+        height: "100%"
+        }}>
+      
+        <Card.Img 
+        style={{ width: "300px",
+        // boxShadow: "5px 5px 5px black",
+        }}
+        variant="top" src="../../login2.jpg" 
+          class="card" 
+          style={{ 
+          float: "right",
+          padding: "42px 35px 10px 30px",
+          }}/>
+  
+       <Card.Body>
+        <Card.Title
+        style={{
+            color: "whitesmoke",
+            float: "left",
+            fontSize: "65px",
+            padding: "45px 45px 50px 290px",
+          }}>
+          Login</Card.Title>
+        
+        </Card.Body>
             {data ? (
               <p>
                 Success! You may now head{" "}
-                <Link to="/Single">back to the homepage.</Link>
+                <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit}>
-                <input
-                  className="form-input"
-                  placeholder="Your Paw-Mail"
-                  name="email"
-                  type="email"
-                  value={formState.email}
-                  onChange={handleChange}
-                />
-                <input
-                  className="form-input"
-                  placeholder="Paw Print"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
-                />
-                <button
-                  className="btn btn-block btn-primary"
-                  style={{ cursor: "pointer" }}
-                  type="submit"
-                >
-                  Submit
-                </button>
-              </form>
-            )}
-
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </main>
-  );
-};
-
-export default Login;
+        <form onSubmit={handleFormSubmit}>
+  
+      <input
+      style={{
+        fontSize: "15px",
+        height: "45px",
+        width: "200px",
+        textAlign: "center",
+        margin: "45px 15px 15px 260px",
+      }}
+        className="form-input"
+        placeholder="Your Paw-Mail"
+        name="email"
+        type="email"
+        value={formState.email}
+        onChange={handleChange}
+        />
+  
+      <input
+      style={{
+        fontSize: "15px",
+        height: "45px",
+        width: "200px",
+        textAlign: "center",
+        margin: "25px 15px 155px 260px",
+      }}
+        className="form-input"
+        placeholder="Paw Print"
+        name="password"
+        type="password"
+        value={formState.password}
+        onChange={handleChange}
+        />
+      
+        <button
+          className="btn btn-block btn-primary"
+          style={{ cursor: "pointer" }}
+          type="submit"
+        >
+          Submit
+        </button>
+        </form>
+        )}
+  
+       </Card>
+     </main>
+  
+    );
+  };
+  
+  export default Login;
+  
