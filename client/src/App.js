@@ -17,6 +17,8 @@ import Profile from "./pages/Profile";
 import Header from "./components/Header/NavBar";
 import Footer from "./components/Footer/Footer";
 
+
+
 const httpLink = createHttpLink({
   uri: "/graphql",
 });

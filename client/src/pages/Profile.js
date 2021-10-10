@@ -43,14 +43,14 @@ const Profile = () => {
             style={{
               background: "#9da2ae",
               color: "white",
-              fontFamily: "Patrick Hand, cursive",
+              fontFamily: "'Josefin Sans', sans-serif",
             }}
           >
             <Card.Title
               style={{
                 background: "#293242",
                 color: "white",
-                fontFamily: "Patrick Hand, cursive",
+                fontFamily: "'Josefin Sans', sans-serif",
                 textDecoration: "underline",
               }}
             >
@@ -64,7 +64,7 @@ const Profile = () => {
               style={{
                 background: "#293242",
                 color: "white",
-                fontFamily: "Patrick Hand, cursive",
+                fontFamily: "'Josefin Sans', sans-serif",
               }}
             >
               Viewing {userParam ? `${user.username}'s` : "your"} profile.
@@ -74,7 +74,7 @@ const Profile = () => {
               style={{
                 background: "white",
                 color: "black",
-                fontFamily: "Patrick Hand, cursive",
+                fontFamily: "'Josefin Sans', sans-serif",
                 minHeight: "100px",
                 width: "1650px",
               }}
@@ -91,14 +91,14 @@ const Profile = () => {
             style={{
               background: "#a53860",
               color: "white",
-              fontFamily: "Patrick Hand, cursive",
+              fontFamily: "'Josefin Sans', sans-serif",
             }}
           >
             <Card.Title
               style={{
                 background: "#a53860",
                 color: "white",
-                fontFamily: "Patrick Hand, cursive",
+                fontFamily: "'Josefin Sans', sans-serif",
                 textDecoration: "underline",
               }}
             >
@@ -111,7 +111,7 @@ const Profile = () => {
               style={{
                 background: "#a53860",
                 color: "white",
-                fontFamily: "Patrick Hand, cursive",
+                fontFamily: "'Josefin Sans', sans-serif",
               }}
             >
               Please, share your thoughts
@@ -120,7 +120,7 @@ const Profile = () => {
               style={{
                 background: "white",
                 color: "black",
-                fontFamily: "Patrick Hand, cursive",
+                fontFamily: "'Josefin Sans', sans-serif",
                 minHeight: "200px",
                 width: "1650px",
               }}
@@ -138,14 +138,14 @@ const Profile = () => {
           style={{
             background: "#a53860",
             color: "white",
-            fontFamily: "Patrick Hand, cursive",
+            fontFamily: "'Josefin Sans', sans-serif",
           }}
         >
           <Card.Title
             style={{
               background: "#a53860",
               color: "white",
-              fontFamily: "Patrick Hand, cursive",
+              fontFamily: "'Josefin Sans', sans-serif",
               textDecoration: "underline",
             }}
           >
@@ -158,7 +158,7 @@ const Profile = () => {
             style={{
               background: "#a53860",
               color: "white",
-              fontFamily: "Patrick Hand, cursive",
+              fontFamily: "'Josefin Sans', sans-serif",
             }}
           >
             Want to make a change or delete a post? Do it below:
@@ -167,7 +167,7 @@ const Profile = () => {
             style={{
               background: "white",
               color: "black",
-              fontFamily: "Patrick Hand, cursive",
+              fontFamily: "'Josefin Sans', sans-serif",
               minHeight: "200px",
               width: "1650px",
             }}

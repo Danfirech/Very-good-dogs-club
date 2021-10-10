@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation, useHistory } from "react-router-dom";
 import { Card } from "react-bootstrap";
 
+
 const Footer = () => {
   const styles = {
     jazz: {
@@ -11,7 +12,7 @@ const Footer = () => {
       padding: 10,
       bottom: 25,
       top: 25,
-      fontFamily: "Patrick Hand, cursive",
+      fontFamily: "'Josefin Sans', sans-serif",
     },
   };
 
@@ -38,7 +39,7 @@ const Footer = () => {
                 style={{
                   display: "inline-block",
                   color: "white",
-                  fontFamily: "Patrick Hand, cursive",
+                  fontFamily: "'Josefin Sans', sans-serif",
                 }}
               >
                 Natalie Scott
@@ -47,16 +48,17 @@ const Footer = () => {
                 style={{
                   display: "inline-block",
                   color: "white",
-                  fontFamily: "Patrick Hand, cursive",
+                  fontFamily: "'Josefin Sans', sans-serif",
                 }}
               >
+                <i class="fas fa-paw"></i>
                 Daniel Possehl{" "}
               </ul>
               <ul
                 style={{
                   display: "inline-block",
                   color: "white",
-                  fontFamily: "Patrick Hand, cursive",
+                  fontFamily: "'Josefin Sans', sans-serif",
                 }}
               >
                 Stephanie Johansson
@@ -65,7 +67,7 @@ const Footer = () => {
                 style={{
                   display: "inline-block",
                   color: "white",
-                  fontFamily: "Patrick Hand, cursive",
+                  fontFamily: "'Josefin Sans', sans-serif",
                 }}
               >
                 K'trina Apodaca

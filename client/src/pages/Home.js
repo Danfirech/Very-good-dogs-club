@@ -21,7 +21,7 @@ const Home = () => {
           style={{
             textAlign: "center",
             color: "white",
-            fontFamily: "Patrick Hand",
+            fontFamily: "'Josefin Sans', sans-serif",
           }}
         >
           {" "}
@@ -40,7 +40,7 @@ const Home = () => {
               style={{
                 fontSize: "24px",
                 color: "white",
-                fontFamily: "Patrick Hand, cursive",
+                fontFamily: "'Josefin Sans', sans-serif",
               }}
             >
               Thanks for stopping by! Please read before going any further
@@ -49,7 +49,7 @@ const Home = () => {
               style={{
                 fontSize: "14px",
                 color: "white",
-                fontFamily: "Patrick Hand, cursive",
+                fontFamily: "'Josefin Sans', sans-serif",
               }}
             >
               This is a safe place for your dog to write their thoughts,
@@ -97,14 +97,14 @@ const Home = () => {
               style={{
                 background: "#293242",
                 color: "white",
-                fontFamily: "Patrick Hand, cursive",
+                fontFamily: "'Josefin Sans', sans-serif",
               }}
             >
               <Card.Title
                 style={{
                   background: "#293242",
                   color: "white",
-                  fontFamily: "Patrick Hand, cursive",
+                  fontFamily: "'Josefin Sans', sans-serif",
                   textDecoration: "underline",
                 }}
               >
@@ -118,7 +118,7 @@ const Home = () => {
                 style={{
                   background: "white",
                   color: "black",
-                  fontFamily: "Patrick Hand, cursive",
+                  fontFamily: "'Josefin Sans', sans-serif",
                   minHeight: "200px",
                   width: "400px",
                 }}
@@ -134,14 +134,14 @@ const Home = () => {
             style={{
               background: "#293242",
               color: "white",
-              fontFamily: "Patrick Hand, cursive",
+              fontFamily: "'Josefin Sans', sans-serif",
             }}
           >
             <Card.Title
               style={{
                 background: "#293242",
                 color: "white",
-                fontFamily: "Patrick Hand, cursive",
+                fontFamily: "'Josefin Sans', sans-serif",
                 textDecoration: "underline",
               }}
             >
@@ -155,7 +155,7 @@ const Home = () => {
               style={{
                 background: "#293242",
                 color: "white",
-                fontFamily: "Patrick Hand, cursive",
+                fontFamily: "'Josefin Sans', sans-serif",
               }}
             >
               Here are our Top Posts of the Month:
@@ -165,7 +165,7 @@ const Home = () => {
               style={{
                 background: "white",
                 color: "black",
-                fontFamily: "Patrick Hand, cursive",
+                fontFamily: "'Josefin Sans', sans-serif",
                 minHeight: "600px",
                 width: "800px",
               }}
@@ -173,7 +173,6 @@ const Home = () => {
           </Card.Body>
         </Card>
       </div>
-      );
     </main>
   );
 };
