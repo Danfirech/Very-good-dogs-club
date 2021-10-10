@@ -53,7 +53,7 @@ const PostForm = () => {
   const handleChange = (event) => {
     const { name, value } = event.target;
 
-    if (name === "thoughtPost" && value.length <= 280) {
+    if (name === "postText" && value.length <= 280) {
       setPostText(value);
       setCharacterCount(value.length);
     }
@@ -61,7 +61,7 @@ const PostForm = () => {
 
   return (
     <div>
-      <h3 style={{ color: "white", fontFamily: "Patrick Hand, cursive" }}>
+      <h3 style={{ color: "#916848", fontFamily: "Josefin Sans, cursive" }}>
         Bark at me
       </h3>
 
@@ -94,11 +94,11 @@ const PostForm = () => {
                 Add Your Post
               </button>
             </div>
-            {error && (
+            {/* {error && (
               <div className="col-12 my-3 bg-danger text-white p-3">
                 {error.message}
               </div>
-            )}
+            )} */}
           </form>
         </>
       ) : (

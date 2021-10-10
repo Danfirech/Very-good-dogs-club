@@ -1,117 +1,83 @@
-import React from "react";
-import { Redirect, useParams } from "react-router-dom";
+import React, { useEffect } from "react";
+
+import { Redirect, useHistory } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { Card, Button, ButtonGroup } from "react-bootstrap";
 
 import PostForm from "../components/PostForm/PostForm";
-import PostList from "../components/PostList/PostList";
 
 import { QUERY_USER, QUERY_ME } from "../utils/queries";
 
 import Auth from "../utils/auth";
 
 const Profile = () => {
-  const { username: userParam } = useParams();
-
-  const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
-    variables: { username: userParam },
+  const { loading, data } = useQuery(QUERY_USER, {
+    variables: { username: Auth.getProfile().data.username },
   });
+  const history = useHistory();
+  useEffect(() => {
+    if (!Auth.loggedIn()) {
+      history.push("/");
+    }
+  }, []);
 
   const user = data?.me || data?.user || {};
-  if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
-    return <Redirect to="/me" />;
-  }
 
   if (loading) {
     return <div>Loading...</div>;
   }
 
-  if (!user?.username) {
-    return <h4>Please log in with your pawdentials!</h4>;
-  }
-
   return (
     <div
       style={{
-        background: "#9da2ae",
+        background: "white",
       }}
     >
-      <br></br>
       <div container>
-        <Card style={{ width: "100", height: "200px" }}>
+        <Card style={{ width: "100", height: "50px" }}>
           <Card.Body
             style={{
               background: "#9da2ae",
               color: "white",
-              fontFamily: "Patrick Hand, cursive",
+              fontFamily: "Josefin Sans, sans-serif",
             }}
           >
             <Card.Title
               style={{
-                background: "#293242",
-                color: "white",
-                fontFamily: "Patrick Hand, cursive",
-                textDecoration: "underline",
-              }}
-            >
-              Viewing {userParam ? `${user.username}'s` : "your"} profile.
-            </Card.Title>
-            {/* <Card.Subtitle className="mb-2 text-muted">
-            Card Subtitle
-          </Card.Subtitle> */}
-
-            <Card.Text
-              style={{
-                background: "#293242",
-                color: "white",
-                fontFamily: "Patrick Hand, cursive",
-              }}
-            >
-              Viewing {userParam ? `${user.username}'s` : "your"} profile.
-            </Card.Text>
-
-            <input
-              style={{
                 background: "white",
-                color: "black",
-                fontFamily: "Patrick Hand, cursive",
-                minHeight: "100px",
-                width: "1650px",
+                color: "#293242",
+                fontFamily: "Josefin Sans, sans-serif",
               }}
-            ></input>
+            >
+              Viewing {Auth.getProfile().data.username}'s profile
+            </Card.Title>
           </Card.Body>
         </Card>
       </div>
-
-      <br></br>
-      <br></br>
       <div container>
         <Card style={{ width: "100", height: "300px" }}>
           <Card.Body
             style={{
-              background: "#a53860",
-              color: "white",
-              fontFamily: "Patrick Hand, cursive",
+              background: "white",
+              color: "#916848",
+              fontFamily: "Josefin Sans, sans-serif",
             }}
           >
             <Card.Title
               style={{
-                background: "#a53860",
-                color: "white",
-                fontFamily: "Patrick Hand, cursive",
+                background: "white",
+                color: "#916848",
+                fontFamily: "Josefin Sans, sans-serif",
                 textDecoration: "underline",
               }}
             >
               Get your paws on a new post
             </Card.Title>
-            {/* <Card.Subtitle className="mb-2 text-muted">
-            Card Subtitle
-          </Card.Subtitle> */}
-            <Card.Text
+            {/* <Card.Text
               style={{
                 background: "#a53860",
                 color: "white",
-                fontFamily: "Patrick Hand, cursive",
+                fontFamily: "Josefin Sans, sans-serif",
               }}
             >
               Please, share your thoughts
@@ -120,13 +86,14 @@ const Profile = () => {
               style={{
                 background: "white",
                 color: "black",
-                fontFamily: "Patrick Hand, cursive",
+                fontFamily: "Josefin Sans, sans-serif",
                 minHeight: "200px",
                 width: "1650px",
               }}
             ></input>
             <br></br>
-            <Button style={{ background: "#E5989B" }}>Share</Button>{" "}
+            <Button style={{ background: "#E5989B" }}>Share</Button>{" "} */}
+            <PostForm />
           </Card.Body>
         </Card>
       </div>
@@ -136,16 +103,16 @@ const Profile = () => {
       <Card style={{ width: "100", height: "300px" }}>
         <Card.Body
           style={{
-            background: "#a53860",
-            color: "white",
-            fontFamily: "Patrick Hand, cursive",
+            background: "white",
+            color: "#916848",
+            fontFamily: "Josefin Sans, sans-serif",
           }}
         >
           <Card.Title
             style={{
-              background: "#a53860",
-              color: "white",
-              fontFamily: "Patrick Hand, cursive",
+              background: "white",
+              color: "#916848",
+              fontFamily: "Josefin Sans, sans-serif",
               textDecoration: "underline",
             }}
           >
@@ -156,9 +123,9 @@ const Profile = () => {
           </Card.Subtitle> */}
           <Card.Text
             style={{
-              background: "#a53860",
-              color: "white",
-              fontFamily: "Patrick Hand, cursive",
+              background: "white",
+              color: "#916848",
+              fontFamily: "Josefin Sans, sans-serif",
             }}
           >
             Want to make a change or delete a post? Do it below:
@@ -167,7 +134,7 @@ const Profile = () => {
             style={{
               background: "white",
               color: "black",
-              fontFamily: "Patrick Hand, cursive",
+              fontFamily: "Josefin Sans, sans-serif",
               minHeight: "200px",
               width: "1650px",
             }}

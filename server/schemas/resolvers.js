@@ -8,18 +8,22 @@ const resolvers = {
       return User.find().populate("posts");
     },
     user: async (parent, { username }) => {
+      console.log("username", username);
       return User.findOne({ username }).populate("posts");
     },
     posts: async (parent, { username }) => {
       const params = username ? { username } : {};
-      return Post.find(params);
+      console.log(username);
+      const posts = await Post.find(params);
+      return posts;
     },
     post: async (parent, { postId }) => {
       return Post.findOne({ _id: postId });
     },
-    me: async (parent, args, context) => {
+    me: async (parent, { username }, context) => {
+      console.log("me resolver", username, context);
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate("posts");
+        return User.findOne({ username }).populate("posts");
       }
       throw new AuthenticationError("You need to be logged in!");
     },
@@ -48,11 +52,11 @@ const resolvers = {
 
       return { token, user };
     },
-    addPost: async (parent, { postText }, context) => {
+    addPost: async (parent, { postText, postAuthor }, context) => {
       if (context.user) {
         const post = await Post.create({
           postText,
-          postAuthor: context.user.username,
+          postAuthor,
         });
 
         await User.findOneAndUpdate(
@@ -88,10 +92,10 @@ const resolvers = {
           postAuthor: context.user.username,
         });
 
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $pull: { posts: post._id } }
-        );
+        // await User.findOneAndUpdate(
+        //   { _id: context.user._id },
+        //   { $pull: { posts: post._id } }
+        // );
 
         return post;
       }

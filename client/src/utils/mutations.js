@@ -24,8 +24,8 @@ export const ADD_USER = gql`
   }
 `;
 export const ADD_POST = gql`
-  mutation addPost($postId: ID!, $postText: String!) {
-    addPost(postId: $postId, postText: $postText) {
+  mutation addPost($postText: String!, $postAuthor: String!) {
+    addPost(postText: $postText, postAuthor: $postAuthor) {
       _id
       postText
       postAuthor
@@ -50,6 +50,15 @@ export const ADD_COMMENT = gql`
         commentText
         createdAt
       }
+    }
+  }
+`;
+
+export const REMOVE_POST = gql`
+  mutation removePost($postId: ID!) {
+    removePost(postId: $postId) {
+      _id
+      postAuthor
     }
   }
 `;

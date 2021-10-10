@@ -1,17 +1,18 @@
 import React from "react";
 import { useLocation, useHistory } from "react-router-dom";
 import { Card } from "react-bootstrap";
+import "./Footer.css";
 
 const Footer = () => {
   const styles = {
     jazz: {
-      background: "#9da2ae",
-      color: "white",
+      background: "#A4A3A1",
+      color: "#293242",
       textAlign: "center",
       padding: 10,
       bottom: 25,
       top: 25,
-      fontFamily: "Patrick Hand, cursive",
+      fontFamily: "Josefin Sans, sans-serif",
     },
   };
 
@@ -21,7 +22,7 @@ const Footer = () => {
   return (
     <div>
       <br></br>
-      <div container>
+      <div className="sticky">
         <Card style={styles.jazz}>
           <Card.Body style={styles.jazz}>
             <footer>
@@ -37,8 +38,8 @@ const Footer = () => {
               <ul
                 style={{
                   display: "inline-block",
-                  color: "white",
-                  fontFamily: "Patrick Hand, cursive",
+                  color: "#293242",
+                  fontFamily: "Josefin Sans, sans-serif",
                 }}
               >
                 Natalie Scott
@@ -46,17 +47,18 @@ const Footer = () => {
               <ul
                 style={{
                   display: "inline-block",
-                  color: "white",
-                  fontFamily: "Patrick Hand, cursive",
+                  color: "#293242",
+                  fontFamily: "Josefin Sans, sans-serif",
                 }}
               >
+                <i class="fas fa-paw"></i>
                 Daniel Possehl{" "}
               </ul>
               <ul
                 style={{
                   display: "inline-block",
-                  color: "white",
-                  fontFamily: "Patrick Hand, cursive",
+                  color: "#293242",
+                  fontFamily: "Josefin Sans, sans-serif",
                 }}
               >
                 Stephanie Johansson
@@ -64,20 +66,12 @@ const Footer = () => {
               <ul
                 style={{
                   display: "inline-block",
-                  color: "white",
-                  fontFamily: "Patrick Hand, cursive",
+                  color: "#293242",
+                  fontFamily: "Josefin Sans, sans-serif",
                 }}
               >
                 K'trina Apodaca
               </ul>
-              {location.pathname !== "/" && (
-                <button
-                  className="btn btn-dark mb-3"
-                  onClick={() => history.goBack()}
-                >
-                  &larr; Go Back
-                </button>
-              )}
             </footer>
           </Card.Body>
         </Card>
