@@ -3,7 +3,8 @@ import { useQuery } from "@apollo/client";
 import { Card } from "react-bootstrap";
 
 import PostList from "../components/PostList/PostList";
-import PostForm from "../components/PostForm/PostForm";
+// import PostForm from "../components/PostForm/PostForm";
+import SideBar from "../components/SideBar/SideBar";
 
 import { QUERY_POSTS } from "../utils/queries";
 
@@ -13,19 +14,19 @@ const Home = () => {
 
   return (
     <main>
-      <div style={{ background: "#293242" }}>
+      <div style={{ background: "white" }}>
         <br></br>
         <br></br>
         <br></br>
         <h1
           style={{
             textAlign: "center",
-            color: "white",
-            fontFamily: "Patrick Hand",
+            color: "#293242",
+            fontFamily: "Josefin Sans",
           }}
         >
           {" "}
-          BARK-COME to the very good dogs club!
+          BARK-COME to The Very Good Dogs Club!
         </h1>
         <br></br>
         <Card style={{ textAlign: "center" }}>
@@ -39,17 +40,17 @@ const Home = () => {
             <Card.Title
               style={{
                 fontSize: "24px",
-                color: "white",
-                fontFamily: "Patrick Hand, cursive",
+                color: "#293242",
+                fontFamily: "Josefin Sans, cursive",
               }}
             >
               Thanks for stopping by! Please read before going any further
             </Card.Title>
             <Card.Text
               style={{
-                fontSize: "14px",
-                color: "white",
-                fontFamily: "Patrick Hand, cursive",
+                fontSize: "20px",
+                color: "#293242",
+                fontFamily: "Josefin Sans, cursive",
               }}
             >
               This is a safe place for your dog to write their thoughts,
@@ -59,121 +60,90 @@ const Home = () => {
             </Card.Text>
           </Card.Body>
         </Card>
-
-        <div
-          className="col-12 col-md-10 mb-3 p-3"
-          style={{ border: "1px dotted #1a1a1a" }}
-        >
-          <PostForm />
-        </div>
-        <div style={{ color: "white" }} className="col-12 col-md-8 mb-3">
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <PostList posts={posts} title="Post..." />
-          )}
-        </div>
       </div>
-      <div
-        style={{
-          background: "#9da2ae",
-          height: "100vh",
-        }}
-      >
-        <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <div>
         <div
-          container
-          style={{ display: "inline", justifyContent: "spaceBetween" }}
+          style={{
+            background: "white",
+            height: "100vh",
+          }}
         >
-          <Card
-            style={{
-              width: "100",
-              height: "300px",
-              float: "right",
-              left: "15px",
-            }}
+          <div
+            container
+            style={{ display: "inline", justifyContent: "spaceBetween" }}
           >
+            <Card
+              style={{
+                width: "350px",
+                height: "800px",
+                float: "right",
+                left: "20px",
+              }}
+            >
+              <Card.Body
+                style={{
+                  background: "white",
+                  color: "#293242",
+                  fontFamily: "Josefin Sans, cursive",
+                }}
+              >
+                {/* <Card.Title
+                  style={{
+                    background: "#293242",
+                    color: "#B3A188",
+                    fontFamily: "Josefin Sans, cursive",
+                    textDecoration: "underline",
+                  }}
+                >
+                  Top Dawgs of the Month:
+                </Card.Title> */}
+                <SideBar />
+                <br></br>
+              </Card.Body>
+            </Card>
+            <br></br>
+          </div>
+          <br></br>{" "}
+          <Card style={{ width: "1500px", height: "400px", border: "none" }}>
             <Card.Body
               style={{
                 background: "#293242",
                 color: "white",
-                fontFamily: "Patrick Hand, cursive",
+                fontFamily: "Josefin Sans, cursive",
               }}
             >
               <Card.Title
                 style={{
                   background: "#293242",
                   color: "white",
-                  fontFamily: "Patrick Hand, cursive",
+                  fontFamily: "Josefin Sans, cursive",
+                  fontSize: "30px",
                   textDecoration: "underline",
                 }}
               >
-                Top Dawgs of the Month:
+                Blog Posts
               </Card.Title>
-              {/* <Card.Subtitle className="mb-2 text-muted">
-            Card Subtitle
-          </Card.Subtitle> */}
-
-              <input
-                style={{
-                  background: "white",
-                  color: "black",
-                  fontFamily: "Patrick Hand, cursive",
-                  minHeight: "200px",
-                  width: "400px",
-                }}
-              ></input>
-              <br></br>
+              <div style={{ color: "white" }} className="col-12 col-md-8 mb-3">
+                {loading ? (
+                  <div>Loading...</div>
+                ) : (
+                  <PostList posts={posts} title="Post..." />
+                )}
+              </div>
             </Card.Body>
           </Card>
-          <br></br>
         </div>
-        <br></br>{" "}
-        <Card style={{ width: "900px", height: "400px", border: "none" }}>
-          <Card.Body
-            style={{
-              background: "#293242",
-              color: "white",
-              fontFamily: "Patrick Hand, cursive",
-            }}
-          >
-            <Card.Title
-              style={{
-                background: "#293242",
-                color: "white",
-                fontFamily: "Patrick Hand, cursive",
-                textDecoration: "underline",
-              }}
-            >
-              Top blog posts
-            </Card.Title>
-            {/* <Card.Subtitle className="mb-2 text-muted">
-            Card Subtitle
-          </Card.Subtitle> */}
-
-            <Card.Text
-              style={{
-                background: "#293242",
-                color: "white",
-                fontFamily: "Patrick Hand, cursive",
-              }}
-            >
-              Here are our Top Posts of the Month:
-            </Card.Text>
-
-            <input
-              style={{
-                background: "white",
-                color: "black",
-                fontFamily: "Patrick Hand, cursive",
-                minHeight: "600px",
-                width: "800px",
-              }}
-            ></input>
-          </Card.Body>
-        </Card>
       </div>
-      );
     </main>
   );
 };

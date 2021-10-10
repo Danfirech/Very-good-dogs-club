@@ -16,17 +16,20 @@ const navbar = () => {
       <div className="topCenter">
         <ul className="topList">
           <li className="topListItem">
-            <Link class="nav-link1 topListItem" to="/">
+            <Link className="nav-link1 topListItem" to="/">
               Home
             </Link>
-            <Link class="nav-link1 topListItem" to="/me">
+            <Link className="nav-link1 topListItem" to="/me">
               Profile
             </Link>
-            <Link class="nav-link1 topListItem" to="/signup">
+            <Link className="nav-link1 topListItem" to="/signup">
               Sign Up
             </Link>
-            <Link class="nav-link1 topListItem" to="/login">
+            <Link className="nav-link1 topListItem" to="/login">
               Login
+            </Link>
+            <Link className="nav-link1 topListItem" to="/">
+              Logout
             </Link>
           </li>
         </ul>
