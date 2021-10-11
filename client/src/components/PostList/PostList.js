@@ -4,6 +4,7 @@ import { useMutation } from "@apollo/client";
 import { REMOVE_POST } from "../../utils/mutations";
 import { Button } from "react-bootstrap";
 import Auth from "../../utils/auth";
+import "./PostList.css";
 
 const PostList = ({ posts, title, showTitle = true, showUsername = true }) => {
   const [removePost, { data, error }] = useMutation(REMOVE_POST);
@@ -30,7 +31,7 @@ const PostList = ({ posts, title, showTitle = true, showUsername = true }) => {
       {posts &&
         posts.map((post) => (
           <div key={post._id} className="card mb-3">
-            <h4 className="card-header bg-primary text-dark p-2 m-0">
+            <h4 className="card-header bg-light text-dark p-2 m-0">
               {username !== post.postAuthor ? (
                 <Link className="text-dark" to={`/profiles/${post.postAuthor}`}>
                   {post.postAuthor} <br />
@@ -52,14 +53,14 @@ const PostList = ({ posts, title, showTitle = true, showUsername = true }) => {
                 </>
               )}
             </h4>
-            <div className="card-body bg-dark p-2">
+            <div className="card-body bg-light p-2">
               <p>{post.postText}</p>
             </div>
             <Link
-              className="btn btn-primary btn-block btn-squared"
+              className="btn btn-light btn-block btn-squared"
               to={`/posts/${post._id}`}
             >
-              Join the discussion on this post.
+              wanna bark about it?
             </Link>
           </div>
         ))}

@@ -3,7 +3,6 @@ import { useQuery } from "@apollo/client";
 import { Card } from "react-bootstrap";
 
 import PostList from "../components/PostList/PostList";
-// import PostForm from "../components/PostForm/PostForm";
 import SideBar from "../components/SideBar/SideBar";
 
 import { QUERY_POSTS } from "../utils/queries";
@@ -31,16 +30,21 @@ const Home = () => {
         <br></br>
         <Card style={{ textAlign: "center" }}>
           <Card.Img
-            style={{ width: "500px" }}
+            style={{ width: "600x" }}
             variant="top"
             src="../../../doggo.jpg"
           />
-          <br></br>
-          <Card.Body>
+
+          <Card.Body
+            style={{
+              background: "#293242",
+            }}
+          >
             <Card.Title
               style={{
+                background: "#293242",
                 fontSize: "24px",
-                color: "#293242",
+                color: "#916848",
                 fontFamily: "Josefin Sans, cursive",
               }}
             >
@@ -49,7 +53,7 @@ const Home = () => {
             <Card.Text
               style={{
                 fontSize: "20px",
-                color: "#293242",
+                color: "#916848",
                 fontFamily: "Josefin Sans, cursive",
               }}
             >
@@ -63,84 +67,37 @@ const Home = () => {
       </div>
       <br></br>
       <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <div>
+
+      <div className="container">
         <div
-          style={{
-            background: "white",
-            height: "100vh",
-          }}
+          className="row"
+          // style={{
+          //   background: "white",
+          //   height: "100vh",
+          // }}
         >
-          <div
-            container
-            style={{ display: "inline", justifyContent: "spaceBetween" }}
+          {/* <Card.Title
+            style={{
+              background: "white",
+              color: "#293242",
+              fontFamily: "Josefin Sans, cursive",
+              fontSize: "30px",
+              textDecoration: "underline",
+            }}
           >
-            <Card
-              style={{
-                width: "350px",
-                height: "800px",
-                float: "right",
-                left: "20px",
-              }}
-            >
-              <Card.Body
-                style={{
-                  background: "white",
-                  color: "#293242",
-                  fontFamily: "Josefin Sans, cursive",
-                }}
-              >
-                {/* <Card.Title
-                  style={{
-                    background: "#293242",
-                    color: "#B3A188",
-                    fontFamily: "Josefin Sans, cursive",
-                    textDecoration: "underline",
-                  }}
-                >
-                  Top Dawgs of the Month:
-                </Card.Title> */}
-                <SideBar />
-                <br></br>
-              </Card.Body>
-            </Card>
-            <br></br>
+            Blog Posts
+          </Card.Title> */}
+
+          <div style={{ color: "#293242" }} className="col-12 col-md-8 mb-3">
+            {loading ? <div>Loading...</div> : <PostList posts={posts} />}
           </div>
-          <br></br>{" "}
-          <Card style={{ width: "1500px", height: "400px", border: "none" }}>
-            <Card.Body
-              style={{
-                background: "white",
-                color: "white",
-                fontFamily: "Josefin Sans, cursive",
-              }}
-            >
-              <Card.Title
-                style={{
-                  background: "#293242",
-                  color: "white",
-                  fontFamily: "Josefin Sans, cursive",
-                  fontSize: "30px",
-                  textDecoration: "underline",
-                }}
-              >
-                Blog Posts
-              </Card.Title>
-              <div
-                style={{ color: "#293242" }}
-                className="col-12 col-md-8 mb-3"
-              >
-                {loading ? <div>Loading...</div> : <PostList posts={posts} />}
-              </div>
-            </Card.Body>
-          </Card>
+          <div
+            className="col-sm-4"
+            // container
+            // style={{ display: "inline", justifyContent: "spaceBetween" }}
+          >
+            <SideBar />
+          </div>
         </div>
       </div>
     </main>

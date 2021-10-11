@@ -10,8 +10,9 @@ const Footer = () => {
       color: "#293242",
       textAlign: "center",
       padding: 10,
-      bottom: 25,
+      bottom: 10,
       top: 25,
+      position: "sticky",
       fontFamily: "Josefin Sans, sans-serif",
     },
   };
@@ -22,7 +23,7 @@ const Footer = () => {
   return (
     <div>
       <br></br>
-      <div className="sticky">
+      <div>
         <Card style={styles.jazz}>
           <Card.Body style={styles.jazz}>
             <footer>

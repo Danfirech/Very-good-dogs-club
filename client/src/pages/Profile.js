@@ -34,30 +34,30 @@ const Profile = () => {
       }}
     >
       <div container>
-        <Card style={{ width: "100", height: "50px" }}>
-          <Card.Body
+        {/* <Card style={{ width: "100", height: "50px" }}> */}
+        <Card.Body
+          style={{
+            background: "white",
+            color: "white",
+            fontFamily: "Josefin Sans, sans-serif",
+          }}
+        >
+          <br></br>
+          <br></br>
+          <br></br>
+
+          <Card.Title
             style={{
               background: "white",
-              color: "white",
+              color: "#293242",
               fontFamily: "Josefin Sans, sans-serif",
+              fontSize: "30px",
             }}
           >
-            <br></br>
-            <br></br>
-            <br></br>
-
-            <Card.Title
-              style={{
-                background: "white",
-                color: "#293242",
-                fontFamily: "Josefin Sans, sans-serif",
-                fontSize: "30px",
-              }}
-            >
-              Viewing {Auth.getProfile().data.username}'s profile
-            </Card.Title>
-          </Card.Body>
-        </Card>
+            Viewing {Auth.getProfile().data.username}'s profile
+          </Card.Title>
+        </Card.Body>
+        {/* </Card> */}
       </div>
       <br></br>
       <br></br>
@@ -119,21 +119,15 @@ const Profile = () => {
           >
             Want to make a change or delete a post? Do it below:
           </Card.Text>
-          <input
-            style={{
-              background: "white",
-              color: "black",
-              fontFamily: "Josefin Sans, sans-serif",
-              minHeight: "200px",
-              width: "1650px",
-            }}
-          ></input>
+
           <br></br>
           <br></br>
-          <ButtonGroup aria-label="Basic example">
-            <Button style={{ background: "#E5989B" }}>Update</Button>
-            <Button style={{ background: "#E5989B" }}>Delete</Button>
-          </ButtonGroup>
+          <br></br>
+          <br></br>
+
+          <button type="button" class="btn btn-outline-dark">
+            Delete
+          </button>
         </Card.Body>
       </Card>
       <br></br>
