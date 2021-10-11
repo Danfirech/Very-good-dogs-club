@@ -117,7 +117,7 @@ const Home = () => {
           <Card style={{ width: "1500px", height: "400px", border: "none" }}>
             <Card.Body
               style={{
-                background: "#293242",
+                background: "white",
                 color: "white",
                 fontFamily: "Josefin Sans, cursive",
               }}
@@ -133,12 +133,11 @@ const Home = () => {
               >
                 Blog Posts
               </Card.Title>
-              <div style={{ color: "white" }} className="col-12 col-md-8 mb-3">
-                {loading ? (
-                  <div>Loading...</div>
-                ) : (
-                  <PostList posts={posts} title="Post..." />
-                )}
+              <div
+                style={{ color: "#293242" }}
+                className="col-12 col-md-8 mb-3"
+              >
+                {loading ? <div>Loading...</div> : <PostList posts={posts} />}
               </div>
             </Card.Body>
           </Card>

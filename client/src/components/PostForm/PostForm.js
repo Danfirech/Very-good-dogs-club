@@ -61,9 +61,16 @@ const PostForm = () => {
 
   return (
     <div>
-      <h3 style={{ color: "#916848", fontFamily: "Josefin Sans, cursive" }}>
-        Bark at me
-      </h3>
+      <h2
+        style={{
+          color: "#916848",
+          fontFamily: "Josefin Sans, cursive",
+          font: "200px",
+        }}
+      >
+        BARK AT ME
+      </h2>
+      <h3>Add a post below</h3>
 
       {Auth.loggedIn() ? (
         <>
@@ -79,18 +86,24 @@ const PostForm = () => {
             onSubmit={handleFormSubmit}
           >
             <div className="col-12 col-lg-9">
-              <textarea
+              <input
                 name="postText"
-                placeholder="Bark..."
                 value={postText}
                 className="form-input w-100"
-                style={{ lineHeight: "1.5", resize: "vertical" }}
+                style={{
+                  background: "white",
+                  color: "black",
+                  fontFamily: "Josefin Sans, sans-serif",
+                  fontSize: "20px",
+                  minHeight: "200px",
+                  width: "1650px",
+                }}
                 onChange={handleChange}
-              ></textarea>
+              ></input>
             </div>
-
+            <br></br>
             <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
+              <button className="btn btn-outline-dark" type="submit">
                 Add Your Post
               </button>
             </div>
