@@ -2,13 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { REMOVE_POST } from "../../utils/mutations";
+import { Button } from "react-bootstrap";
 import Auth from "../../utils/auth";
+import "./PostList.css";
 
 const PostList = ({ posts, title, showTitle = true, showUsername = true }) => {
   const [removePost, { data, error }] = useMutation(REMOVE_POST);
   if (!posts.length) {
     return (
-      <h3 style={{ color: "white", fontFamily: "Patrick Hand, cursive" }}>
+      <h3 style={{ color: "#293242", fontFamily: "Patrick Hand, cursive" }}>
         No Post Yet
       </h3>
     );
@@ -29,25 +31,25 @@ const PostList = ({ posts, title, showTitle = true, showUsername = true }) => {
       {posts &&
         posts.map((post) => (
           <div key={post._id} className="card mb-3">
-            <h4 className="card-header bg-primary text-light p-2 m-0">
+            <h4 className="card-header bg-light text-dark p-2 m-0">
               {username !== post.postAuthor ? (
-                <Link
-                  className="text-light"
-                  to={`/profiles/${post.postAuthor}`}
-                >
+                <Link className="text-dark" to={`/profiles/${post.postAuthor}`}>
                   {post.postAuthor} <br />
-                  <span style={{ fontSize: "1rem" }}>
+                  {/* <span style={{ fontSize: "1rem" }}>
                     barked about this {post.createdAt}
-                  </span>
+                  </span> */}
                 </Link>
               ) : (
                 <>
                   <span style={{ fontSize: "1rem" }}>
                     You barked this on {post.createdAt}
                   </span>
-                  <button onClick={() => handleDelete(post._id)}>
+                  <Button
+                    variant="outline-dark"
+                    onClick={() => handleDelete(post._id)}
+                  >
                     Delete Post
-                  </button>
+                  </Button>
                 </>
               )}
             </h4>
@@ -55,10 +57,10 @@ const PostList = ({ posts, title, showTitle = true, showUsername = true }) => {
               <p>{post.postText}</p>
             </div>
             <Link
-              className="btn btn-primary btn-block btn-squared"
+              className="btn btn-light btn-block btn-squared"
               to={`/posts/${post._id}`}
             >
-              Join the discussion on this post.
+              wanna bark about it?
             </Link>
           </div>
         ))}

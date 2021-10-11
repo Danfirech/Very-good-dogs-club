@@ -27,14 +27,12 @@ export default function SideBar() {
       <br></br>
       <br></br>
       <div className="sidebarItem">
-        <span className="sidebarTitle">Top Dogs</span>
+        <span className="sidebarTitle">Follow Us</span>
         <div className="sidebarSocial">
-          <li className="sidebarListItem">Leo</li>
-          <li className="sidebarListItem">Olive</li>
-          <li className="sidebarListItem">Lucy</li>
-          <li className="sidebarListItem">Wile</li>
-          <li className="sidebarListItem">Rusty</li>
-          <li className="sidebarListItem">Pumpkin</li>
+          <li className="sidebarListItem">to the dog park</li>
+          <li className="sidebarListItem">the mountains</li>
+          <li className="sidebarListItem">the lake</li>
+          <li className="sidebarListItem">agility</li>
         </div>
       </div>
     </div>

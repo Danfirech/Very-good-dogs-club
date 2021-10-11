@@ -34,26 +34,34 @@ const Profile = () => {
       }}
     >
       <div container>
-        <Card style={{ width: "100", height: "50px" }}>
-          <Card.Body
+        {/* <Card style={{ width: "100", height: "50px" }}> */}
+        <Card.Body
+          style={{
+            background: "white",
+            color: "white",
+            fontFamily: "Josefin Sans, sans-serif",
+          }}
+        >
+          <br></br>
+          <br></br>
+          <br></br>
+
+          <Card.Title
             style={{
-              background: "#9da2ae",
-              color: "white",
+              background: "white",
+              color: "#293242",
               fontFamily: "Josefin Sans, sans-serif",
+              fontSize: "30px",
             }}
           >
-            <Card.Title
-              style={{
-                background: "white",
-                color: "#293242",
-                fontFamily: "Josefin Sans, sans-serif",
-              }}
-            >
-              Viewing {Auth.getProfile().data.username}'s profile
-            </Card.Title>
-          </Card.Body>
-        </Card>
+            Viewing {Auth.getProfile().data.username}'s profile
+          </Card.Title>
+        </Card.Body>
+        {/* </Card> */}
       </div>
+      <br></br>
+      <br></br>
+
       <div container>
         <Card style={{ width: "100", height: "300px" }}>
           <Card.Body
@@ -70,33 +78,14 @@ const Profile = () => {
                 fontFamily: "Josefin Sans, sans-serif",
                 textDecoration: "underline",
               }}
-            >
-              Get your paws on a new post
-            </Card.Title>
-            {/* <Card.Text
-              style={{
-                background: "#a53860",
-                color: "white",
-                fontFamily: "Josefin Sans, sans-serif",
-              }}
-            >
-              Please, share your thoughts
-            </Card.Text>
-            <input
-              style={{
-                background: "white",
-                color: "black",
-                fontFamily: "Josefin Sans, sans-serif",
-                minHeight: "200px",
-                width: "1650px",
-              }}
-            ></input>
-            <br></br>
-            <Button style={{ background: "#E5989B" }}>Share</Button>{" "} */}
+            ></Card.Title>
             <PostForm />
           </Card.Body>
         </Card>
       </div>
+      <br></br>
+      <br></br>
+      <br></br>
       <br></br>
       <br></br>
 
@@ -106,6 +95,7 @@ const Profile = () => {
             background: "white",
             color: "#916848",
             fontFamily: "Josefin Sans, sans-serif",
+            fontSize: "20px",
           }}
         >
           <Card.Title
@@ -113,10 +103,9 @@ const Profile = () => {
               background: "white",
               color: "#916848",
               fontFamily: "Josefin Sans, sans-serif",
-              textDecoration: "underline",
             }}
           >
-            Update or Delete a Post
+            Previous Posts
           </Card.Title>
           {/* <Card.Subtitle className="mb-2 text-muted">
             Card Subtitle
@@ -130,20 +119,15 @@ const Profile = () => {
           >
             Want to make a change or delete a post? Do it below:
           </Card.Text>
-          <input
-            style={{
-              background: "white",
-              color: "black",
-              fontFamily: "Josefin Sans, sans-serif",
-              minHeight: "200px",
-              width: "1650px",
-            }}
-          ></input>
+
           <br></br>
-          <ButtonGroup aria-label="Basic example">
-            <Button style={{ background: "#E5989B" }}>Update</Button>
-            <Button style={{ background: "#E5989B" }}>Delete</Button>
-          </ButtonGroup>
+          <br></br>
+          <br></br>
+          <br></br>
+
+          <button type="button" class="btn btn-outline-dark">
+            Delete
+          </button>
         </Card.Body>
       </Card>
       <br></br>

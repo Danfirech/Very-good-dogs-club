@@ -72,6 +72,7 @@ const Signup = () => {
               color: "whitesmoke",
               fontSize: "65px",
               padding: "45px 25px 50px 920px",
+              fontFamily: "Josefin Sans, sans-serif",
             }}
           >
             Sign Up
@@ -83,6 +84,7 @@ const Signup = () => {
               fontSize: "25px",
               color: "whitesmoke",
               textAlign: "center",
+              fontFamily: "Josefin Sans, sans-serif",
             }}
           >
             Very Good Dogs Club<br></br>
@@ -102,6 +104,7 @@ const Signup = () => {
                 height: "45px",
                 width: "200px",
                 margin: "75px 15px 15px 145px",
+                fontFamily: "Josefin Sans, sans-serif",
               }}
               className="form-input"
               placeholder="The Name You Respond To"
@@ -118,6 +121,7 @@ const Signup = () => {
                 width: "200px",
                 textAlign: "center",
                 margin: "45px 15px 15px 145px",
+                fontFamily: "Josefin Sans, sans-serif",
               }}
               className="form-input"
               placeholder="Your Paw-Mail"
@@ -134,6 +138,7 @@ const Signup = () => {
                 width: "200px",
                 textAlign: "center",
                 margin: "45px 15px 400px 145px",
+                fontFamily: "Josefin Sans, sans-serif",
               }}
               className="form-input"
               placeholder="Paw Print"
@@ -147,6 +152,7 @@ const Signup = () => {
               className="btn btn-block btn-primary"
               style={{ cursor: "pointer" }}
               type="submit"
+              fontFamily="Josefin Sans, sans-serif"
             >
               Submit
             </button>

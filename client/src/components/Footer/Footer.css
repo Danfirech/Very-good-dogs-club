@@ -1,7 +1,5 @@
-/* .sticky {
-  position: absolute;
-  left: 0;
+.sticky {
+  position: sticky;
   bottom: 0;
-  right: 0;
-  padding-bottom: 60px;
-} */
+  width: 100%;
+}
